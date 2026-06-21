@@ -19,6 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ==================== CEO LEARN MORE (MOBILE) ====================
+    const ceoLearnMoreBtn = document.getElementById('ceoLearnMoreBtn');
+    const ceoBio = document.querySelector('.ceo-bio');
+
+    if (ceoLearnMoreBtn && ceoBio) {
+        ceoLearnMoreBtn.addEventListener('click', () => {
+            const isExpanded = ceoBio.classList.toggle('expanded');
+            ceoLearnMoreBtn.textContent = isExpanded ? 'Read Less' : 'Learn More';
+        });
+    }
+
     // ==================== SELECTED WORKS CAROUSEL ====================
     const cards = document.querySelectorAll('.carousel-card');
     const dots = document.querySelectorAll('.carousel-dots .dot');
